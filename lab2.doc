@@ -1,0 +1,18 @@
+welcome to document .. 
+
+
+steps for using git-cyrpt 
+
+.gitattributes
+
+1.  Prepare the repo to use git-crypt using git-crypt init
+2.   Create file called ..gitattributes
+3. Edit the gitattributes file as shown below 
+	secretfile filter=git-crypt diff=git-crypt
+           *.key filter=git-crypt diff=git-crypt
+
+    above setting will ecnrypt the all *.key files and file name called securefile 
+4. Export the symmetric secret key for the repo .
+5. Share the symmetric secure key to recipent
+6. recipent will clone the repo
+7. run gi-crypt unlock  <path of the symmetirc secure key>
